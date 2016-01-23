@@ -6,7 +6,7 @@ function validate_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
-//echo "Hello World";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if(empty($_POST["email"]))
 		echo "Required Email Address to login"."</br>";
@@ -23,5 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		echo "Required Password" ."</br>";
 	else 
 		echo "Password: ". validate_input($_POST["password"])."<br/>";
+	
 }
+
 ?>
