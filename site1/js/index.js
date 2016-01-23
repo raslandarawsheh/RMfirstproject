@@ -10,16 +10,27 @@ $('#loginform').click(function(){
   $(this).toggleClass('green');
 });
 
-
+$('#signupform').click(function(){
+  $('.signup').fadeToggle('slow');
+  $(this).toggleClass('green');
+});
 
 $(document).mouseup(function (e)
 {
-    var container = $(".login");
-
-    if (!container.is(e.target) // if the target of the click isn't the container...
-        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    var logincontainer = $(".login");
+	var signupcontainer = $(".signup");
+	
+    if (!logincontainer.is(e.target) // if the target of the click isn't the container...
+        && logincontainer.has(e.target).length === 0) // ... nor a descendant of the container
     {
-        container.hide();
+        logincontainer.hide();
         $('#loginform').removeClass('green');
+    }
+    
+    if (!signupcontainer.is(e.target) // if the target of the click isn't the container...
+        && signupcontainer.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        signupcontainer.hide();
+        $('#signupform').removeClass('green');
     }
 });

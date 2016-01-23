@@ -40,6 +40,11 @@ border: none;
   width: 350px;
   display: none;
 }
+.signup {
+  position: relative;
+  width: 350px;
+  display: none;
+}
 
 .arrow-up {
 	width: 0; 
@@ -62,8 +67,7 @@ border: none;
 
   }
   
-  input[type="email"], input[type="password"] {
-    padding: 7px 5px;
+  input[type="email"], input[type="password"],input[type="text"]{
     margin: 10px 0;
     width: 96%;
     display: block;

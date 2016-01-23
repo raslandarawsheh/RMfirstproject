@@ -8,25 +8,52 @@
 
   <body>
 
-    <div id="wrap">
+  <div id="wrap">
   <div id="regbar">
     <div id="navthing">
-      <h2><a href="#" id="loginform">Login</a> | <a href="#">Register</a></h2>
+      <h2><a href="#" id="loginform">Login</a> | <a id="signupform" href="#">Register</a></h2>
     <div class="login">
       <div class="arrow-up"></div>
       <div class="formholder">
         <div class="randompad">
-           <fieldset>
-             <label name="email">Email</label>
-             <input type="email" value="example@example.com" />
+           <form action="login.php" method="post">
+          <fieldset >	
+             <label name="email" >Email</label>
+             <input type="email" name="email" id="email" placeholder="example@example.com" />
              <label name="password">Password</label>
-             <input type="password" />
+             <input  name="password" type="password" id="password" />
              <input type="submit" value="Login" />
- 
            </fieldset>
+           </form>
         </div>
       </div>
     </div>
+    
+    <div class="signup">
+      <div class="arrow-up"></div>
+      <div class="formholder">
+        <div class="randompad">
+        <form action="signup.php" method="post">
+          <fieldset >	
+          	<label name="firstName" >First Name</label>
+             <input type="text" name="firstName"  placeholder="Raslan" /> 
+            <label name="lastName" >Last Name</label>
+             <input type="text" name="lastName"  placeholder="Darawsheh" />
+             <label name="email" >Email</label>
+             <input type="email" name="email" placeholder="example@example.com" />
+             <label name="password">Password</label>
+             <input  name="password" type="password"  /> 
+             <label name="passwordC">Password confirmation </label>
+             <input  name="password" type="password" id="passwordC" />
+             <label name="birthdate"> Birthdate</label>
+  			<input name="birthDate" type="date" /> 
+             <input type="submit" value="signup" />
+           </fieldset>
+           </form>
+        </div>
+      </div>
+    </div>
+    
     </div>
   </div>
 </div>
